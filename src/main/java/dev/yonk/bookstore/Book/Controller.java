@@ -28,7 +28,7 @@ public class Controller {
         }
     }
 
-    @GetMapping("books/{id}")
+    @GetMapping("/books/{id}")
     public ResponseEntity<?> findById(@PathVariable String id) {
         try {
             return new ResponseEntity<>(service.findById(id), HttpStatus.OK);
