@@ -18,14 +18,14 @@ public class BookstoreApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-//        Book book1 = new Book("1","Harry Potter","JKR",200, 20);
-//        Book book2 = new Book("2","Nobody's Boy","Hector Malot",180, 20);
-//        Book book3 = new Book("3","Sherlock Holmes","Arthur Conan Doyle",200, 10);
-//        Book book4 = new Book("4","Hercule Poirot","Agatha Christie",200, 20);
-//
-//        repository.save(book1);
-//        repository.save(book2);
-//        repository.save(book3);
-//        repository.save(book4);
+        Book book1 = new Book("Harry Potter","JKR",200, 20);
+        Book book2 = new Book("Nobody's Boy","Hector Malot",180, 20);
+        Book book3 = new Book("Sherlock Holmes","Arthur Conan Doyle",200, 10);
+        Book book4 = new Book("Hercule Poirot","Agatha Christie",200, 20);
+
+        repository.save(book1);
+        repository.save(book2);
+        repository.save(book3);
+        repository.save(book4);
     }
 }

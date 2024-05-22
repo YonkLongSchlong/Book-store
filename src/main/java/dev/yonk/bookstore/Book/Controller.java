@@ -29,7 +29,7 @@ public class Controller {
     }
 
     @GetMapping("/books/{id}")
-    public ResponseEntity<?> findById(@PathVariable String id) {
+    public ResponseEntity<?> findById(@PathVariable Long id) {
         try {
             return new ResponseEntity<>(service.findById(id), HttpStatus.OK);
         } catch (Exception e) {
@@ -38,7 +38,7 @@ public class Controller {
     }
 
     @GetMapping("/delete/{id}")
-    public ResponseEntity<?> deleteBook(@PathVariable String id) {
+    public ResponseEntity<?> deleteBook(@PathVariable Long id) {
         try {
             service.deleteBook(id);
             return new ResponseEntity<>("Delete book successfully", HttpStatus.OK);
@@ -48,7 +48,7 @@ public class Controller {
     }
 
     @PostMapping("/update/{id}")
-    public ResponseEntity<?> updateBook(@PathVariable String id, @RequestBody Book bookUpdate) {
+    public ResponseEntity<?> updateBook(@PathVariable Long id,  @RequestBody Book bookUpdate) {
         try {
             return new ResponseEntity<>(service.updateBook(id, bookUpdate), HttpStatus.OK);
         } catch (Exception e) {

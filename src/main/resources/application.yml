@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: bookstore
+  datasource:
+    url: jdbc:mysql://localhost:3306/books
+    username: root
+    password: 30102002
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update

@@ -21,12 +21,12 @@ public class Service {
         }
     }
 
-    public Book findById(String id) {
+    public Book findById(Long id) {
         return repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Book not found"));
     }
 
-    public void deleteBook(String id) {
+    public void deleteBook(Long id) {
          try {
              repository.deleteById(id);
          } catch (Exception e) {
@@ -34,7 +34,7 @@ public class Service {
          }
     }
 
-    public Book updateBook(String id, Book bookUpdate) {
+    public Book updateBook(Long id, Book bookUpdate) {
         try {
             Book book = repository.findById(id)
                     .orElseThrow(() -> new RuntimeException("Book not found"));
